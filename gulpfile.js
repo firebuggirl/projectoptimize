@@ -45,10 +45,14 @@ gulp.task("minifyScripts", ["concatScripts"], function() {
 });
 
 
+gulp.task('watchSass', function() {
+  gulp.watch('src/scss/**/*.scss');
 
+})
 
-gulp.task('compileSass', function() {
-  gulp.src("src/scss/main.scss")
+gulp.task('compileSass', ['watchSass'], function() {
+  //gulp.src("src/scss/main.scss")
+  gulp.src("src/scss/**/*.scss")
       .pipe(maps.init())
       .pipe(sass())
       .pipe(maps.write('./'))
@@ -64,9 +68,9 @@ gulp.task('autoprefixer', ['compileSass'], function () {//auto add vendor prefix
         .pipe(gulp.dest('dist/css'));
 });
 
-gulp.task('watchSass', function() {
-  gulp.watch('src/scss/**/*.scss');
-})
+// gulp.task('watchSass', function() {
+//   gulp.watch('src/scss/**/*.scss');
+// })
 
 //gulp.task('minifyCSS', ['autoprefixer', 'watchSass'], function() {
   gulp.task('minifyCSS', ['compileSass', 'autoprefixer', 'watchSass'], function() {

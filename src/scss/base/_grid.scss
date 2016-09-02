@@ -47,33 +47,90 @@
     height: 50px;
     margin-right: 1rem;
     width: 50px;
-      background: url("img/sprites.png") no-repeat;
+    // background: url("../img/sprites.png") no-repeat;
 }
 
-.image-grid .image .info .avatar.avatar1{
-  	background-position: -9px -7px ;
+// .image-grid .image .info .avatar.avatar1{
+//       background: url("../img/sprites.png") no-repeat;
+//   	background-position: -9px -7px ;
+//     display: inline-block;
+// }
+//
+// .image-grid .image .info .avatar.avatar2{
+//      background: url("../img/sprites.png") no-repeat;
+//   	background-position: -159px -16px ;
+//     display: inline-block;
+// }
+//
+// .image-grid .image .info .avatar.avatar3{
+//     background: url("../img/sprites.png") no-repeat;
+//   	background-position: -285px -11px ;
+//     display: inline-block;
+// }
+//
+// .image-grid .image .info .avatar.avatar4{
+//      background: url("../img/sprites.png") no-repeat;
+//   	background-position: -200px -140px ;
+//     display: inline-block;
+// }
+//
+// .image-grid .image .info .avatar.avatar5{
+//      background: url("../img/sprites.png") no-repeat;
+//   	background-position: -356px -107px ;
+//     display: inline-block;
+// }
+//
+// .image-grid .image .info .avatar.avatar6{
+//      background: url("../img/sprites.png") no-repeat;
+//   	background-position: -183px -248px ;
+//     display: inline-block;
+// }
+//
+// .image-grid .image .info .avatar.avatar7{
+//      background: url("../img/sprites.png") no-repeat;
+//   	background-position: 0 -142px ;
+//     display: inline-block;
+// }
+
+.avatar1, .avatar2, .avatar3, .avatar5, .avatar6, .avatar7{
+	background: url("../img/avatars/sprites.png") no-repeat;
+  display: inline-block;
 }
 
-.image-grid .image .info .avatar.avatar2{
-  	background-position: -159px -16px ;
+
+
+.avatar1{
+	background-position: 0 0;
+	width: 50px;
+	height: 50px;
 }
 
-.image-grid .image .info .avatar.avatar3{
-  	background-position: -285px -11px ;
+.avatar2{
+	background-position: -54px 0;
+	width: 50px;
+	height: 50px;
 }
 
-.image-grid .image .info .avatar.avatar4{
-  	background-position: -200px -140px ;
+.avatar3{
+	background-position: 0 -56px ;
+	width: 50px;
+	height: 50px;
 }
 
-.image-grid .image .info .avatar.avatar5{
-  	background-position: -356px -107px ;
+.avatar5{
+	background-position: -54px -112px ;
+	width: 50px;
+	height: 50px;
 }
 
-.image-grid .image .info .avatar.avatar6{
-  	background-position: -183px -248px ;
+.avatar7{
+	background-position: 0 -112px ;
+	width: 50px;
+	height: 50px;
 }
 
-.image-grid .image .info .avatar.avatar7{
-  	background-position: 0 -142px ;
+.avatar7{
+	background-position: -54px -56px ;
+	width: 50px;
+	height: 50px;
 }
