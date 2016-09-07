@@ -7273,43 +7273,76 @@ svg.social {
 .image-grid .image .info .avatar {
   border-radius: 50%;
   float: left;
-  height: 70px;
+  height: 50px;
   margin-right: 1rem;
-  width: 70px; }
+  width: 50px; }
 
 .avatar1, .avatar2, .avatar3, .avatar5, .avatar6, .avatar7 {
   background: url("../img/avatars/sprites.png") no-repeat;
   display: inline-block; }
 
 .avatar1 {
-  background-position: -1px 0;
-  width: 90px;
-  height: 90px; }
+  background-position: 0 0;
+  width: 50px;
+  height: 50px; }
 
 .avatar2 {
-  background-position: 0 -96px;
-  width: 90px;
-  height: 90px; }
+  background-position: -54px 0;
+  width: 50px;
+  height: 50px; }
 
 .avatar3 {
-  background-position: -100px -1px;
-  width: 90px;
-  height: 90px; }
+  background-position: 0 -56px;
+  width: 50px;
+  height: 50px; }
 
 .avatar5 {
-  background-position: -102px -193px;
-  width: 90px;
-  height: 90px; }
+  background-position: -54px -112px;
+  width: 50px;
+  height: 50px; }
 
 .avatar7 {
-  background-position: -102px -97px;
-  width: 90px;
-  height: 90px; }
+  background-position: 0 -112px;
+  width: 50px;
+  height: 50px; }
 
-.avatar6 {
-  background-position: 0 -191px;
-  width: 90px;
-  height: 90px; }
+.avatar7 {
+  background-position: -54px -56px;
+  width: 50px;
+  height: 50px; }
+
+.avatar6modal, .avatar5modal, .avatar7modal, .avatar1modal, .avatar3modal, .avatar2modal {
+  background: url("../img/avatars/spritesmodal.png") no-repeat; }
+
+.avatar6modal {
+  background-position: -85px 0;
+  width: 75px;
+  height: 75px; }
+
+.avatar5modal {
+  background-position: -85px -162px;
+  width: 75px;
+  height: 75px; }
+
+.avatar7modal {
+  background-position: 0 -80px;
+  width: 75px;
+  height: 75px; }
+
+.avatar1modal {
+  background-position: -1px -162px;
+  width: 75px;
+  height: 75px; }
+
+.avatar3modal {
+  background-position: 0 0;
+  width: 75px;
+  height: 75px; }
+
+.avatar2modal {
+  background-position: -86px -81px;
+  width: 75px;
+  height: 75px; }
 
 .reveal-modal .info {
   padding: 2rem 1rem 0; }
