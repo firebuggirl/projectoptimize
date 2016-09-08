@@ -1,0 +1,27 @@
+
+
+//media queries
+
+@mixin bp($point) {
+  @if $point == tablet {
+    @media (min-width: 768px) { @content; }
+  }
+  @else if $point == fullscreen {
+    @media (min-width: 1024px) { @content; }
+  }
+  @else if $point == large_screen {
+    @media (min-width: 1280px) { @content; }
+  }
+  @else if $point == mobile_large{
+    @media (min-width: 414px) { @content;}
+  }
+  @else if $point == mobile_xLarge{
+    @media (min-width: 435px) { @content;}
+  }
+  @else if $point == mobile {
+    @media (min-width: 360px) { @content; }
+    }
+  @else if $point == mobile_small {
+    @media (min-width: 320px) { @content; }
+    }
+}

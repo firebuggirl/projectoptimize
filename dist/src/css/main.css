@@ -7078,7 +7078,16 @@ svg.social {
   background-color: #eff0f1;
   font-family: "Arvo", serif;
   padding: 1.5rem 3rem;
-  height: auto; }
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  @media (min-width: 1024px) {
+    .menu {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: .5rem 1rem; } }
 
 .menu .inline-list {
   padding-top: 1rem;
@@ -7101,13 +7110,6 @@ svg.social {
 
 .menu .inline-list .active a {
   color: #52ca6d; }
-
-@media only screen and (min-width: 40.063em) {
-  .menu {
-    height: 7rem; }
-  .menu .inline-list {
-    float: left;
-    margin: 0 0 0 1.5rem; } }
 
 .menu .account {
   float: right;
@@ -7133,19 +7135,28 @@ svg.social {
   color: #fff; }
 
 .menu .logo {
-  background: url("../src/img/logo.png") no-repeat top left;
-  height: 120px;
-  /*background-size: contain;*/
+  text-indent: 0rem;
   font-family: "Arvo", serif;
   font-size: 2rem;
   font-weight: bold;
   line-height: 1;
   margin: 0 0 1rem 0;
   color: #485461;
-  text-indent: -9999999rem;
+  height: 3rem;
+  background-size: contain;
   overflow: hidden;
-  width: 40rem;
-  height: 3rem; }
+  height: 4rem; }
+  @media (min-width: 768px) {
+    .menu .logo {
+      background: url("../src/img/logo.png") no-repeat top left;
+      margin-left: 60px;
+      width: 32rem;
+      height: rem;
+      text-indent: -9999999rem; } }
+  @media (min-width: 1024px) {
+    .menu .logo {
+      margin-left: -30px;
+      width: 33rem; } }
 
 .menu .logo b {
   color: #2fabce;

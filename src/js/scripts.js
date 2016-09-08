@@ -14,7 +14,7 @@ function preloadImages(array) {
                 // for memory consumption reasons
                 list.splice(index, 1);
             }
-        }
+        };
         list.push(img);
         img.src = array[i];
     }
