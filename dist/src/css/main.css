@@ -7155,7 +7155,7 @@ svg.social {
       text-indent: -9999999rem; } }
   @media (min-width: 1024px) {
     .menu .logo {
-      margin-left: -30px;
+      margin-left: 0px;
       width: 33rem; } }
 
 .menu .logo b {
