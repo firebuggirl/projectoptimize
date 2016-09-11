@@ -17,6 +17,9 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
     cleanCSS = require('gulp-clean-css'),
     inlineImg = require('gulp-inline-image-html');
+    // sprity = require('sprity');
+//
+// sprity.create(options, cb);
   //  h5bp = require('h5bp');//secures backup and hidden files?..trying to cache images via .htaccess
 
 
@@ -26,7 +29,7 @@ gulp.task("concatScripts", function() {
    return gulp.src([
         'src/js/jquery.js',
         'src/js/scripts.js'
-      
+
         ])
       .pipe(maps.init())
       .pipe(concat('src/app.js'))
@@ -102,7 +105,11 @@ gulp.task('imagesOpt', function(cb) {
         interlaced: true
     })).pipe(gulp.dest('dist/img')).on('end', cb).on('error', cb);
 });
-
+gulp.task('image', function () {//best auto compresser so far
+  gulp.src('src/img/**/*')
+    .pipe(image())
+    .pipe(gulp.dest('dist/img'));
+});
 
 gulp.task('images', function() {//run gulp images
   return gulp.src('src/img/**/*')
@@ -123,8 +130,19 @@ gulp.task('images', function() {//run gulp images
   //  .pipe(notify({ message: 'Images task complete' }));
 });
 
+// gulp.task('sprites', function () {
+//   return sprity.src({
+//     src: 'src/img/**/*.{jpg}',
+//     style: 'src/scss/base/_sprite.scss',
+//     // ... other optional options
+//     // for example if you want to generate scss instead of css
+//     processor: 'sass', // make sure you have installed sprity-sass
+//   })
+//   .pipe(gulpif('*.jpg', gulp.dest('dist/img'), gulp.dest('dist/css/')))
+// });
 
-gulp.task("inlineImg", function() {
+
+gulp.task("inlineImg", function() { //A gulp task for inlineing images in HTML...Converts images to inline data URIs
     return gulp.src("src/index.html")
         .pipe(inlineImg('src'))
         .pipe(gulp.dest('dist'))
@@ -156,7 +174,7 @@ gulp.task('browser-sync', function() {
 // });
 
 
-gulp.task("build", ['minifyScripts', 'compileSass', 'minifyCSS', 'minifyHTML'], function() {
+gulp.task("build", ['minifyScripts', 'compileSass', 'minifyCSS', 'minifyHTML', 'image'], function() {
   return gulp.src(["src/css/main.css", "src/js/app.js", 'src/index.html',
                    "src/img/**/*"], { base: './'})
             .pipe(gulp.dest('dist'));
