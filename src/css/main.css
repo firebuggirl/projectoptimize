@@ -7148,7 +7148,7 @@ svg.social {
   height: 4rem; }
   @media (min-width: 768px) {
     .menu .logo {
-      background: url("../src/img/logo.png") no-repeat top left;
+      background: url("../img/logo.png") no-repeat top left;
       margin-left: 60px;
       width: 32rem;
       height: rem;

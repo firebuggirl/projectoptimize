@@ -85,7 +85,7 @@
     height: 4rem;
 
    @include bp(tablet){
-     background: url('../src/img/logo.png') no-repeat top left;
+     background: url("../img/logo.png") no-repeat top left;
      margin-left: 60px;
      width: 32rem;
      height: rem;
