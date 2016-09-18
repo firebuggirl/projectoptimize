@@ -17,10 +17,6 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
     cleanCSS = require('gulp-clean-css'),
     inlineImg = require('gulp-inline-image-html');
-    // sprity = require('sprity');
-//
-// sprity.create(options, cb);
-  //  h5bp = require('h5bp');//secures backup and hidden files?..trying to cache images via .htaccess
 
 
 
@@ -34,7 +30,7 @@ gulp.task("concatScripts", function() {
       .pipe(maps.init())
       .pipe(concat('src/app.js'))
       .pipe(maps.write('./'))
-    // .pipe(gulp.dest('src/js'));
+
 });
 
 gulp.task("minifyScripts", ["concatScripts"], function() {
@@ -51,7 +47,7 @@ gulp.task('watchSass', function() {
 })
 
 gulp.task('compileSass', ['watchSass'], function() {
-  //gulp.src("src/scss/main.scss")
+
   gulp.src("src/scss/**/*.scss")
       .pipe(maps.init())
       .pipe(sass())
@@ -70,7 +66,6 @@ gulp.task('autoprefixer', ['compileSass'], function () {//auto add vendor prefix
 
 
 
-//gulp.task('minifyCSS', ['autoprefixer', 'watchSass'], function() {
   gulp.task('minifyCSS', ['compileSass', 'autoprefixer', 'watchSass'], function() {
     return gulp.src('src/css/main.css')
         //.pipe(sourcemaps.init())
@@ -130,16 +125,7 @@ gulp.task('images', function() {//run gulp images
   //  .pipe(notify({ message: 'Images task complete' }));
 });
 
-// gulp.task('sprites', function () {
-//   return sprity.src({
-//     src: 'src/img/**/*.{jpg}',
-//     style: 'src/scss/base/_sprite.scss',
-//     // ... other optional options
-//     // for example if you want to generate scss instead of css
-//     processor: 'sass', // make sure you have installed sprity-sass
-//   })
-//   .pipe(gulpif('*.jpg', gulp.dest('dist/img'), gulp.dest('dist/css/')))
-// });
+
 
 
 gulp.task("inlineImg", function() { //A gulp task for inlineing images in HTML...Converts images to inline data URIs
@@ -149,6 +135,7 @@ gulp.task("inlineImg", function() { //A gulp task for inlineing images in HTML..
 });
 
 gulp.task("minifyHTML", ['inlineImg'], function() {
+//gulp.task("minifyHTML", function() {
     gulp.src("src/index.html")
         .pipe(minifyHTML())
         .pipe(gulp.dest('dist'));
